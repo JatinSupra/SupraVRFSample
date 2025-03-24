@@ -1,16 +1,13 @@
 module dice_addr::dice_roll {
+
+    use supra_framework::event;
+    use supra_addr::supra_vrf;
+
     use std::error;
     use std::signer;
     use std::string::{Self, String};
     use std::vector;
     use aptos_std::table::{Self, Table};
-
-    use supra_framework::event;
-
-    use supra_addr::supra_vrf;
-
-    /// Error: The request does not exist.
-    const ERROR_REQUEST_DOES_NOT_EXIST: u64 = 0;
 
     struct DiceRequest has key, store, copy {
         user_address: address,
@@ -36,6 +33,9 @@ module dice_addr::dice_roll {
         request_id: u64,
         rolled_number: u256,
     }
+
+    /// Error: The request does not exist.
+    const ERROR_REQUEST_DOES_NOT_EXIST: u64 = 0;
 
     /// Initialize the module by creating a `DiceMapper` resource
     entry fun init_module(sender: &signer) {

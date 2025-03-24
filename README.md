@@ -11,7 +11,7 @@ This repository contains a Move-based smart contract that simulates a dice rolli
 **Store and Retrieve Results:** The contract maps dice roll requests to their outcomes, allowing users to view the resolved dice results using `get_dice_result`.
 
 ## About Supra DVRF
-> Supra's dVRF provides secure, unbiased, and tamper-proof random number generation for blockchain applications. Unlike traditional random functions, DVRF delivers verifiable randomness, ensuring that no party can manipulate or predict the results.
+Supra's dVRF provides secure, unbiased, and tamper-proof random number generation for blockchain applications. Unlike traditional random functions, DVRF delivers verifiable randomness, ensuring that no party can manipulate or predict the results.
 
 ## How This Contract Uses DVRF
 
